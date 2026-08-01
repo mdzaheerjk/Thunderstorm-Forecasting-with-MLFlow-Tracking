@@ -1,4 +1,4 @@
-SWEAT index,K index,Totals totals index,Date,Environment_Stability,Mositure_Indices,Convective_Potential,Temperature_Pressure,Moisture_Temperature_Profiles,TH
+SWEAT index,K index,Totals totals index,Date,Environmental_Stability,Moisture_Indices,Convective_Potential,Temperature_Pressure,Moisture_Temperature_Profiles,TH
 91.2,-1.4,24.7,01/01/81,25.8,22.8,0.0,5636,993.98,0
 75.7,1.6,30.3,02/01/81,21.5,20.4,0.0,5592,956.13,0
 128.3,17.5,41.6,04/01/81,13.8,23.8,0.0,5581,978.71,0

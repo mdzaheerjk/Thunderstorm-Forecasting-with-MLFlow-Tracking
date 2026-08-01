@@ -1,0 +1,17 @@
+ipykernel==7.1.0
+numpy==2.2.6
+pandas==2.3.3
+imbalanced-learn==0.14.0
+scikit-learn==1.7.2     
+seaborn==0.13.2
+matplotlib==3.10.8
+xgboost==3.1.2    
+mlflow==3.7.0     
+dagshub==0.6.3    
+fastapi==0.124.2
+uvicorn[standard] 
+pydantic==2.12.5
+joblib==1.5.2
+streamlit==1.52.1
+python-multipart==0.0.20
+gunicorn==23.0.0
