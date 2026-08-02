@@ -8,7 +8,10 @@ st.set_page_config(
     layout="wide"
 )
 
-API_URL = "http://localhost:8000/predict"
+import os
+
+BACKEND_URL = os.getenv("BACKEND_URL")
+API_URL = f"{BACKEND_URL}/predict"
 
 st.title("🌦 Weather Thunderstorm Prediction App")
 st.markdown("Enter atmospheric parameters to predict TH (Thunderstorm Occurrence)")
