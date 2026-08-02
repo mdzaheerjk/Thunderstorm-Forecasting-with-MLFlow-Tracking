@@ -1,7 +1,8 @@
 import pandas as pd
 from app.model_loader import model
 
-FEATURE_COLUMNS=[
+# Exact columns and sequence your model expects
+FEATURE_COLUMNS = [
     "SWEAT index",  
     "K index",
     "Totals totals index",
@@ -10,16 +11,20 @@ FEATURE_COLUMNS=[
     "Convective_Potential",
     "Temperature_Pressure",
     "Moisture_Temperature_Profiles"
-
 ]
 
-def predict_weather(features:list):
-    df=pd.DataFrame([features],columns=FEATURE_COLUMNS)
+def predict_weather(features: list):
+    """
+    Accepts a clean, flat list of numbers, builds a proper DataFrame,
+    and returns predictions.
+    """
+    # Create the DataFrame safely from a 2D list format
+    df = pd.DataFrame([features], columns=FEATURE_COLUMNS)
 
-    prediction=model.predict(df)
-    proba=model.predict_proba(df)[:,1] if hasattr(model,"predict_proba") else None
+    prediction = model.predict(df)
+    proba = model.predict_proba(df)[:, 1] if hasattr(model, "predict_proba") else None
 
     return {
-        "prediction":int(prediction[0]),
-        'probability':float(proba[0]) if proba is not None else None
+        "prediction": int(prediction[0]),
+        "probability": float(proba[0]) if proba is not None else None
     }

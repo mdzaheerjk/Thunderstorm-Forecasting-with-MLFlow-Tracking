@@ -1,17 +1,21 @@
+## backend code
+
 from fastapi import FastAPI
 from app.schemas import WeatherInput
 from app.predictor import predict_weather
 
-app = FastAPI(title='ThunderStorm Prediction API')
 
-@app.get('/')
+app = FastAPI(title="Thunderstrom Prediction API")
+
+# to ensure app is running
+@app.get("/")
 def home():
-    return {'Message': "Weather Prediction API is operational"}
+    return {"message": "Weather Prediction API is running"}
 
-@app.post('/predict')
+# microservice
+
+@app.post("/predict")
 def predict(data: WeatherInput):
-    # Keep this as a simple flat list: [val1, val2, val3...]
-    features = data.to_list() 
-    
-    result = predict_weather(features)
+    features = data.to_list()
+    result = predict_weather(features) # prob , pred
     return result
