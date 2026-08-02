@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-MODEL_PATH='models/KNN_best_model.pkl'
+MODEL_PATH='model/Random_Forest_best_model.pkl'
 model=joblib.load(MODEL_PATH)
 
 st.title("🌦 Thunderstorm Prediction App")
